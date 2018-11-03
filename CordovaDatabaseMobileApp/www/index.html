@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!--Updated for this labwork-->
+    <!-- Updated CSS and JavaScript ref -->
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/databaseHandler.js"></script>
+    <script type="text/javascript" src="mobileui/mobileui.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="scripts/productHandler.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Apache Cordova</title>
+    <style>
+        #titleAwesome {
+            font-family: 'Chewy', cursive;
+            font-size: 40px;
+            line-height: 24px;
+            z-index: 33;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="cover vertical-align-center blue-grey-900 align-center blend-soft-light" style="background-image:url('/img/music1.jpg')">
+    <div data-role="page" id="addpage">
+        <div data-role="panel" id="addPagePanel">
+            <h1>Menu</h1>
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">password</li>
+                <li data-icon="plus"><a href="#addpage">Add</a></li>
+                <li data-icon="grid"><a href="#loadpage">Load</a></li>
+            </ul>
+        </div>
+        <div data-role="header" data-position="fixed">
+            <a href="#addPagePanel"
+               class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow"></a>
+            <h1>Add password</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <form>
+                <div class="ui-field-contain">
+                    <label for="txtName">username:</label>
+                    <input type="text" id="txtName" data-clear-btn="true" />
+                    <label for="txtPassword">password:</label>
+                    <input type="text" id="txtPassword" data-clear-btn="true" />
+                    <label for="btnAdd"></label>
+                    <a class="ui-btn ui-icon-plus ui-btn-icon-left"
+                       id="btnAdd" onclick="addProduct()">Add</a>
+                </div>
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>Cordova Database App</h1>
+        </div>
+    </div>
+</body>
+</html>
